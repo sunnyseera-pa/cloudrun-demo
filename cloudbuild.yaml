@@ -1,8 +1,8 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/devops-ss-sandbox/github.com/sunnyseera/docker:$SHORT_SHA', '.']
+  args: ['build', '-t', 'gcr.io/sunny-meetup-sandbox/github.com/sunnyseera-pa/cloudrun-demo:$SHORT_SHA', '.']
   # the image can be found in the cloud build trigger history
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/devops-ss-sandbox/github.com/sunnyseera/docker:$SHORT_SHA']
+  args: ['push', 'gcr.io/sunny-meetup-sandbox/github.com/sunnyseera-pa/cloudrun-demo:$SHORT_SHA']
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['run', 'deploy', 'docker', '--region=us-central1', '--platform=managed', '--image=gcr.io/devops-ss-sandbox/github.com/sunnyseera/docker:d13d352']
+  args: ['run', 'deploy', 'docker', '--region=europe-west1', '--platform=managed', '--image=gcr.io/devops-ss-sandbox/github.com/sunny-meetup-sandbox/github.com/sunnyseera-pa/cloudrun-demo:$SHORT_SHA']
