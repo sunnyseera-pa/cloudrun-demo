@@ -6,5 +6,3 @@ steps:
   args: ['push', 'gcr.io/sunny-meetup-sandbox/github.com/sunnyseera-pa/cloudrun-demo:$SHORT_SHA']
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['run', 'deploy', 'docker', '--region=europe-west1', '--platform=managed', '--image=gcr.io/devops-ss-sandbox/github.com/sunny-meetup-sandbox/github.com/sunnyseera-pa/cloudrun-demo:$SHORT_SHA']
-  options:
-    logging: CLOUD_LOGGING_ONLY
