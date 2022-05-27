@@ -1,7 +1,7 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/sunny-meetup-sandbox/github.com/sunnyseera-pa/cloudrun-demo:$SHORT_SHA', '.']
-  # the image can be found in the cloud build trigger history
+  # the image can be found in the cloud build trigger history!
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/sunny-meetup-sandbox/github.com/sunnyseera-pa/cloudrun-demo:$SHORT_SHA']
 - name: 'gcr.io/cloud-builders/gcloud'
