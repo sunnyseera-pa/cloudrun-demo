@@ -3,7 +3,7 @@
 const http = require('http')
 const server = http.createServer((req, res) => {
     console.log('A new connection has been made')
-    res.end('Hello GCP!')
+    res.end('Hello Belfast!')
 })
 
 // Listen on a port 
